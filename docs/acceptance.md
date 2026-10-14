@@ -7,7 +7,7 @@ command results belong in the PR validation evidence and CI for its revision.
 | Spec criterion | Evidence | Gate |
 | --- | --- | --- |
 | 1. Installed offline producer/consumer interoperability | `uv build`; `python scripts/check-installed.py`: pinned producer wheels in separate environments, actual controlled endpoint exports, servers stopped, isolated installed consumer, copied release verified | Required |
-| 2. Reviewed real 2024 shared claim | Bounded real captures from both producers verified in ignored operator storage. Selected Kalshi party-replacement/inauguration semantics do not establish the supported individual-winner predicate. No shared claim has been accepted. | **BLOCKED; draft PR; no v1 readiness** |
+| 2. Reviewed real 2024 shared claim | Bounded real captures from both producers verified in ignored operator storage. Selected Kalshi party-replacement/inauguration semantics do not establish the supported individual-winner predicate. No shared claim has been accepted. | **BLOCKED; no v1 readiness** |
 | 3. Positive claims, polarity and policy relationships | `pytest -q tests/test_election.py tests/test_runtime.py` | Synthetic |
 | 4. Wrong scope and materially different predicates/policies | `pytest -q tests/test_election.py tests/test_contracts.py` | Synthetic |
 | 5. Missing/ambiguous evidence, unusable identities and visible coverage | `pytest -q tests/test_inputs.py tests/test_adapters.py tests/test_election.py tests/test_validation.py` | Synthetic |
@@ -25,7 +25,7 @@ command results belong in the PR validation evidence and CI for its revision.
 - [x] Independent test, security and data reviews are reconciled; aggregate copy budgets, contradictory settlement text and equivalent deadline encodings have regression coverage.
 - [x] Independent verifier inspected the complete change and reran `scripts/verify`: 169 tests and all build/audit/installed checks passed; approval is scoped to draft implementation delivery.
 - [x] Blocking Linux and macOS CI [passed](https://github.com/TheOddsFox/market-semantics/actions/runs/38542116415) for the implementation and portable harness. Exact-head results are linked in [PR checks](https://github.com/TheOddsFox/market-semantics/pull/1/checks).
-- [x] Draft product [PR #1](https://github.com/TheOddsFox/market-semantics/pull/1) is linked; no merge, deployment or package publication.
+- [x] Implementation [PR #1](https://github.com/TheOddsFox/market-semantics/pull/1) is linked. Requested integration into `main` does not establish v1 readiness; deployment and package publication remain outside scope.
 - [ ] Real reviewed shared-claim gate passes. **Currently blocked.**
 
 Real evidence is deliberately retained outside public Git and distributions.

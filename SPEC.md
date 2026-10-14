@@ -1,6 +1,6 @@
 # Market Semantics Specification
 
-Status: implemented draft. Synthetic acceptance passes; real shared-claim
+Status: implemented, unreleased. Synthetic acceptance passes; real shared-claim
 evidence remains a mandatory, currently blocked v1 readiness gate.
 
 ## Purpose
@@ -62,7 +62,8 @@ Donald Trump and Kamala Harris. Synthetic development may proceed before real
 bundles are available, after the supported predicate, rule interpretations,
 entity aliases and synthetic cases are frozen. Reviewed real records from both
 venues establishing a shared candidate/election claim remain a mandatory v1
-readiness gate; the PR stays draft while that evidence is missing. Selecting
+readiness gate. Integration into `main` does not satisfy that evidence gate or
+authorize a v1 release. Selecting
 election winner markets does not assert coverage of every election worldwide.
 
 Supported interpretations use deterministic parsing and small, versioned curated
