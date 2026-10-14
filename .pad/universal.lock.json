@@ -1,0 +1,12 @@
+{
+  "files": {
+    ".agents/skills/pad-engineering/SKILL.md": "3cb5185116663c2f8ee58764a4180784ff2604b05e2e75b2b6f13cc1ccfd0071",
+    "AGENTS.md": "8e0e7df28f0df8d847f4981da0978c28c2c9615b0382c3bfc62c6af90a52f6b1",
+    "PROJECT_AGENT.md": "86cfa8a0d12e98ebb0a46d1594d16537a1edcfa6af599bff74421c8bbdfd3aee",
+    "scripts/verify": "db8cfe5f5481485b23fd2b2926b3d70264a766e18cd06a2eb27d546b71c2fe52",
+    "scripts/verify-fast": "9861093c992527dc15135999f9d9e2a8e8b68e46fed3c232a9de1f76f3747743"
+  },
+  "repository": "oddsfox-market-semantics",
+  "version": "1.1.0",
+  "workspace": "oddsfox-market-semantics-engineering"
+}

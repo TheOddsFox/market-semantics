@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Operator evidence and generated releases never belong in public source.
+data/
+artifacts/
+.state/
+*.sqlite
+.interop/

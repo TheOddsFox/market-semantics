@@ -1,0 +1,394 @@
+{
+  "entities": [
+    {
+      "name": "entity_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "entity_type",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "label",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "aliases_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "identity_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "evidence_json",
+      "type": "string",
+      "nullable": false
+    }
+  ],
+  "claims": [
+    {
+      "name": "claim_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "schema_version",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "predicate",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "candidate_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "election_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "polarity",
+      "type": "bool",
+      "nullable": false
+    },
+    {
+      "name": "scope_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "canonical_json",
+      "type": "string",
+      "nullable": false
+    }
+  ],
+  "native_outcomes": [
+    {
+      "name": "native_outcome_revision_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "venue",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "native_market_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "side",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "asset_kind",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "asset_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "condition_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "source_market_version",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "outcome_index",
+      "type": "int32",
+      "nullable": true
+    },
+    {
+      "name": "outcome_label",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "clob_token_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "position_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "chain_index_set",
+      "type": "int32",
+      "nullable": true
+    },
+    {
+      "name": "event_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "series_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "native_key_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "input_manifest_sha256",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "source_release_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "observation_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "received_at",
+      "type": "timestamp[us, tz=UTC]",
+      "nullable": false
+    },
+    {
+      "name": "source_updated_at",
+      "type": "timestamp[us, tz=UTC]",
+      "nullable": true
+    },
+    {
+      "name": "source_updated_at_raw_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "definition_sha256",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "definition_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "policy_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "usable",
+      "type": "bool",
+      "nullable": false
+    },
+    {
+      "name": "diagnostics_json",
+      "type": "string",
+      "nullable": false
+    }
+  ],
+  "outcome_mappings": [
+    {
+      "name": "assessment_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "native_outcome_revision_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "claim_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "reason_code",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "method",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "rule_revision",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "curation_decision_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "supersedes_assessment_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "evidence_json",
+      "type": "string",
+      "nullable": false
+    }
+  ],
+  "relationships": [
+    {
+      "name": "assessment_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "left_revision_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "right_revision_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "relationship_type",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "reason_code",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "comparison_json",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "rule_revision",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "curation_decision_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "supersedes_assessment_id",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "evidence_json",
+      "type": "string",
+      "nullable": false
+    }
+  ],
+  "coverage": [
+    {
+      "name": "venue",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "native_market_id",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "producer_status",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "producer_reason",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "name": "source_usable",
+      "type": "bool",
+      "nullable": true
+    },
+    {
+      "name": "observed_outcome_count",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "usable_outcome_count",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "exported_outcome_count",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "mapped_count",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "unresolved_count",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "unsupported_count",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "unusable_count",
+      "type": "int32",
+      "nullable": false
+    },
+    {
+      "name": "semantic_disposition",
+      "type": "string",
+      "nullable": false
+    },
+    {
+      "name": "diagnostics_json",
+      "type": "string",
+      "nullable": false
+    }
+  ]
+}
