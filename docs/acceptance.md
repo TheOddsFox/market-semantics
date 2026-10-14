@@ -25,7 +25,7 @@ command results belong in the PR validation evidence and CI for its revision.
 - [x] Independent test, security and data reviews are reconciled; aggregate copy budgets, contradictory settlement text and equivalent deadline encodings have regression coverage.
 - [x] Independent verifier inspected the complete change and reran `scripts/verify`: 169 tests and all build/audit/installed checks passed; approval is scoped to draft implementation delivery.
 - [ ] Blocking Linux and macOS CI checks pass for the delivered revision.
-- [ ] Draft product PR is linked; no merge, deployment or package publication.
+- [x] Draft product [PR #1](https://github.com/TheOddsFox/market-semantics/pull/1) is linked; no merge, deployment or package publication.
 - [ ] Real reviewed shared-claim gate passes. **Currently blocked.**
 
 Real evidence is deliberately retained outside public Git and distributions.

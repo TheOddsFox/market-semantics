@@ -357,26 +357,39 @@ def main():
                 env=env,
             ).strip()
         )
-        (site / "sitecustomize.py").write_text(
+        (site / "market_semantics_acceptance_guard.py").write_text(
             "BLOCKED_ROOTS = "
             + repr([str(p) for p in repositories.values()])
             + "\n"
             + NETWORK_GUARD
         )
+        (site / "market_semantics_acceptance_guard.pth").write_text(
+            "import market_semantics_acceptance_guard\n"
+        )
+        # A pre-existing startup module must not shadow the acceptance guard.
+        existing_startup = root / "existing-startup"
+        existing_startup.mkdir()
+        (existing_startup / "sitecustomize.py").write_text("ACCEPTANCE_PREEXISTING = True\n")
+        (site / "00_acceptance_existing_startup.pth").write_text(
+            "import sys; sys.path.insert(0, " + repr(str(existing_startup)) + ")\n"
+        )
         run(
             [
                 consumer_python,
                 "-c",
-                "import market_semantics,sitecustomize; "
+                "import market_semantics,sitecustomize,market_semantics_acceptance_guard; "
                 "assert 'site-packages' in market_semantics.__file__; "
-                "assert 'site-packages' in sitecustomize.__file__",
+                "assert sitecustomize.ACCEPTANCE_PREEXISTING; "
+                "assert 'site-packages' in market_semantics_acceptance_guard.__file__",
             ],
             cwd=unrelated,
             env=env,
         )
         guard_check = """
-import importlib, socket, sitecustomize
-for root in sitecustomize.BLOCKED_ROOTS:
+import importlib, socket, sitecustomize, market_semantics_acceptance_guard
+assert sitecustomize.ACCEPTANCE_PREEXISTING
+assert 'site-packages' in market_semantics_acceptance_guard.__file__
+for root in market_semantics_acceptance_guard.BLOCKED_ROOTS:
     try:
         open(root + '/pyproject.toml')
     except RuntimeError as error:
@@ -398,6 +411,18 @@ else:
     raise AssertionError('network guard missing')
 """
         run([consumer_python, "-c", guard_check], cwd=unrelated, env=env)
+        child_probe = unrelated / "guard-child.py"
+        child_probe.write_text(
+            "import multiprocessing\n"
+            + "def probe():\n    exec("
+            + repr(guard_check)
+            + ")\n"
+            + "if __name__ == '__main__':\n"
+            + "    child = multiprocessing.get_context('spawn').Process(target=probe)\n"
+            + "    child.start()\n    child.join(30)\n"
+            + "    assert child.exitcode == 0, 'spawned child guard failed'\n"
+        )
+        run([consumer_python, child_probe], cwd=unrelated, env=env)
         cli = consumer_env / "bin/market-semantics"
         release = root / "release"
         compiled = json.loads(
