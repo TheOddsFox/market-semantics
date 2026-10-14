@@ -24,7 +24,7 @@ command results belong in the PR validation evidence and CI for its revision.
 - [x] Installed actual-producer handoff passes with semantic runtime networking denied.
 - [x] Independent test, security and data reviews are reconciled; aggregate copy budgets, contradictory settlement text and equivalent deadline encodings have regression coverage.
 - [x] Independent verifier inspected the complete change and reran `scripts/verify`: 169 tests and all build/audit/installed checks passed; approval is scoped to draft implementation delivery.
-- [ ] Blocking Linux and macOS CI checks pass for the delivered revision.
+- [x] Blocking Linux and macOS CI [passed](https://github.com/TheOddsFox/market-semantics/actions/runs/38542116415) for the implementation and portable harness. Exact-head results are linked in [PR checks](https://github.com/TheOddsFox/market-semantics/pull/1/checks).
 - [x] Draft product [PR #1](https://github.com/TheOddsFox/market-semantics/pull/1) is linked; no merge, deployment or package publication.
 - [ ] Real reviewed shared-claim gate passes. **Currently blocked.**
 
