@@ -10,6 +10,7 @@ import subprocess
 import tarfile
 import tempfile
 import threading
+from collections import Counter
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -247,9 +248,12 @@ def acquire(root, environments, unrelated, env):
         )
         assert receipts["polymarket"]["http_attempts"] == 1
         assert receipts["polymarket"]["found"] == 1
-        assert receipts["kalshi"]["requests"] == 5
+        # v1 reads the historical cutoff again immediately before the historical market.
+        assert receipts["kalshi"]["requests"] == 6
         assert receipts["kalshi"]["accounting_complete"] is True
-        assert sorted(seen) == sorted(expected), "unexpected or missing producer requests"
+        assert Counter(seen) == Counter([*expected, "/trade-api/v2/historical/cutoff"]), (
+            "unexpected or missing producer requests"
+        )
     finally:
         server.shutdown()
         server.server_close()
