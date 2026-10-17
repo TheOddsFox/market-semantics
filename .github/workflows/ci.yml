@@ -29,13 +29,13 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           repository: TheOddsFox/polymarket-events
-          ref: bd5eb0c1af1e40295305b6558d9ea28d1f1ce5fa
+          ref: 10cfedce999e41fc63459b9054fb611b5b3f0297
           path: .interop/polymarket-events
           persist-credentials: false
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           repository: TheOddsFox/kalshi-events
-          ref: 8b0c04b0e2c5d96edec14b525f483ccfdff66134
+          ref: 43d12bcdb554cd0b2928e6d5edc9a2396aeda3cf
           path: .interop/kalshi-events
           persist-credentials: false
       - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
