@@ -399,8 +399,8 @@ separate evidence and acceptance criteria.
 
 Existing contract baselines inspected for this specification:
 
-- [Polymarket metadata handoff](https://github.com/TheOddsFox/polymarket-events/blob/bd5eb0c1af1e40295305b6558d9ea28d1f1ce5fa/README.md#targeted-metadata-handoffs) and [catalogue contract](https://github.com/TheOddsFox/polymarket-events/blob/bd5eb0c1af1e40295305b6558d9ea28d1f1ce5fa/docs/catalogue-v2.md).
-- [Kalshi metadata handoff](https://github.com/TheOddsFox/kalshi-events/blob/8b0c04b0e2c5d96edec14b525f483ccfdff66134/README.md#targeted-metadata-handoff) and [native contract invariants](https://github.com/TheOddsFox/kalshi-events/blob/8b0c04b0e2c5d96edec14b525f483ccfdff66134/docs/contracts.md).
+- [Polymarket catalogue](https://github.com/TheOddsFox/polymarket-events/blob/10cfedce999e41fc63459b9054fb611b5b3f0297/README.md) and [current catalogue contract](https://github.com/TheOddsFox/polymarket-events/blob/10cfedce999e41fc63459b9054fb611b5b3f0297/docs/current-catalogue.md).
+- [Kalshi metadata handoff](https://github.com/TheOddsFox/kalshi-events/blob/6fb46f7cf2bd6e9e5c3c750d71a68188f24e0872/README.md#targeted-metadata-handoff) and [native contract invariants](https://github.com/TheOddsFox/kalshi-events/blob/6fb46f7cf2bd6e9e5c3c750d71a68188f24e0872/docs/contracts.md).
 - [Polymarket market-data contract and grains](https://github.com/TheOddsFox/polymarket-market-data/blob/fb2a3580352c1696e896dbbf08aea932b572e32d/README.md).
 - [Kalshi market-data definitions and time semantics](https://github.com/TheOddsFox/kalshi-market-data/blob/39fdc2c6151861c47a1fb0d19c35c0529503e595/README.md).
 - [Polygon economic-fill scope](https://github.com/TheOddsFox/polymarket-polygon-settlements/blob/fe019c5e1f128889a83ae4cd1867ffe7865553ac/README.md).

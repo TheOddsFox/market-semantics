@@ -18,13 +18,13 @@ PRODUCERS = {
     "polymarket": (
         "POLYMARKET_EVENTS_SOURCE",
         "polymarket/polymarket-events",
-        "bd5eb0c1af1e40295305b6558d9ea28d1f1ce5fa",
+        "10cfedce999e41fc63459b9054fb611b5b3f0297",
         "catalogue",
     ),
     "kalshi": (
         "KALSHI_EVENTS_SOURCE",
         "kalshi/kalshi-events",
-        "8b0c04b0e2c5d96edec14b525f483ccfdff66134",
+        "6fb46f7cf2bd6e9e5c3c750d71a68188f24e0872",
         "kalshi-events",
     ),
 }
