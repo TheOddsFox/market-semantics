@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           repository: TheOddsFox/kalshi-events
-          ref: 43d12bcdb554cd0b2928e6d5edc9a2396aeda3cf
+          ref: 6fb46f7cf2bd6e9e5c3c750d71a68188f24e0872
           path: .interop/kalshi-events
           persist-credentials: false
       - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
